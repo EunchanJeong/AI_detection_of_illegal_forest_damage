@@ -14,7 +14,7 @@ def load_model(path):
     return model_
 
 
-vgg_model = load_model('model_vgg_2500.h5', compile = False)
+vgg_model = load_model('model_vgg_2500.h5')
 
 # YOLO 모델 불러오기
 yolo_model = torch.hub.load('ultralytics/yolov5', 'custom', path='model_yolo.pt',  source='local')
