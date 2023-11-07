@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from keras.models import load_model
+from tensorflow.python.keras.models import load_model
 import time
 
 import torch
