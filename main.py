@@ -15,7 +15,8 @@ vgg_model = load_model('model_vgg_2500.h5', compile = False)
 
 # # YOLO 모델 불러오기
 # yolo_model = load_model('model_yolo.pt')
-yolo_model = torch.hub.load('ultralytics/yolov5', 'custom', path='model_yolo.pt', force_reload=True)
+#yolo_model = torch.hub.load('yolov5_mountain_v2', 'custom', path='model_yolo.pt',  source='local')
+yolo_model = torch.hub.load('yolov5_mountain_v2', 'custom', path='model_yolo.pt', force_reload=True)
 
 # 타이틀
 st.markdown("<h1 style='text-align: center; color: green;'>그린</h1>", unsafe_allow_html=True)
