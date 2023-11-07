@@ -1,14 +1,14 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.models import load_model
+from tensorflow.python.keras.preprocessing import image
+from tensorflow.python.keras.models import load_model
 import time
 
 import torch
 
 # VGG 모델 불러오기
-#vgg_model = load_model('model_vgg_2500.h5')
+vgg_model = load_model('model_vgg_2500.h5', compile = False)
 
 # YOLO 모델 불러오기
 yolo_model = load_model('model_yolo.pt')
