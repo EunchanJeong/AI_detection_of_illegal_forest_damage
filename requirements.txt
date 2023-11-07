@@ -9,6 +9,7 @@ hydralit-components==1.0.10
 joblib
 branca
 torch==2.1.0
+torchvision
 opencv-python
 intel-openmp
 cv
