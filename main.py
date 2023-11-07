@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from keras.preprocessing import image
 from tensorflow.python.keras.models import load_model
 import time
 
