@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.python.keras.models import load_model
 import time
 
-# import torch
+import torch
 
 # eager execution 비활성화
 tf.compat.v1.disable_eager_execution()
