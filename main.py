@@ -6,16 +6,15 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.python.keras.models import load_model
 import time
 
-import torch
+# import torch
 
+# eager execution 비활성화
+tf.compat.v1.disable_eager_execution()
 
-tf.compat.v1.disable_eager_excution()
-
-# VGG 모델 불러오기
 vgg_model = load_model('model_vgg_2500.h5', compile = False)
 
-# YOLO 모델 불러오기
-yolo_model = load_model('model_yolo.pt')
+# # YOLO 모델 불러오기
+# yolo_model = load_model('model_yolo.pt')
 
 # 타이틀
 st.markdown("<h1 style='text-align: center; color: green;'>그린</h1>", unsafe_allow_html=True)
@@ -66,16 +65,16 @@ if st.button('AI 탐지'):
                     st.error(image_selection)
                     st.image(img, caption=f"이미지 이름: {img_name}", use_column_width=True)
                     
-                elif image_selection == "불법 산림 의심 지역 객체 탐지" and prediction <= 0.5:
-                    st.success("객체 탐지 이미지")
-                    results = yolo_model(img)
-                    # 결과 이미지를 Pillow Image로 변환
-                    result_image = results.render()[0]
-                    # Pillow Image를 NumPy 배열로 변환
-                    result_np = np.array(result_image)
+                # elif image_selection == "불법 산림 의심 지역 객체 탐지" and prediction <= 0.5:
+                #     st.success("객체 탐지 이미지")
+                #     results = yolo_model(img)
+                #     # 결과 이미지를 Pillow Image로 변환
+                #     result_image = results.render()[0]
+                #     # Pillow Image를 NumPy 배열로 변환
+                #     result_np = np.array(result_image)
                     
-                    # 이미지를 Streamlit 앱에서 표시
-                    st.image(result_np, caption=f"이미지 이름: {img_name}", use_column_width=True)
+                #     # 이미지를 Streamlit 앱에서 표시
+                #     st.image(result_np, caption=f"이미지 이름: {img_name}", use_column_width=True)
 
             # 로딩 시간 조절
             time.sleep(2)
