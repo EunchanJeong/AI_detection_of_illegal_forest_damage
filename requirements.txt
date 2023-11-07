@@ -1,0 +1,14 @@
+streamlit
+#streamlit_folium
+#folium
+numpy
+pandas
+#geopy
+#haversine
+#hydralit-components==1.0.10
+#joblib
+#branca
+#torch==2.1.0
+#opencv-python
+#intel-openmp
+#cv
