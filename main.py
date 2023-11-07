@@ -2,13 +2,19 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 from keras.preprocessing import image
-from tensorflow.python.keras.models import load_model
+#from tensorflow.python.keras.models import load_model
 import time
 
 import torch
 
 # VGG 모델 불러오기
-vgg_model = load_model('model_vgg_2500.h5', compile = False)
+@st.experimental_singleton
+def load_model(path):
+    model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
+    return model_
+
+
+#vgg_model = load_model('model_vgg_2500.h5', compile = False)
 
 # YOLO 모델 불러오기
 yolo_model = torch.hub.load('ultralytics/yolov5', 'custom', path='model_yolo.pt',  source='local')
