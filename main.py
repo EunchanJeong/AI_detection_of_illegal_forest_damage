@@ -11,10 +11,10 @@ import torch
 # eager execution 비활성화
 tf.compat.v1.disable_eager_execution()
 
-vgg_model = load_model('model_vgg_2500.h5', compile = False)
+vgg_model = load_model('model/model_vgg_2500.h5', compile = False)
 
 # YOLO 모델 불러오기
-yolo_path = 'model_yolo.pt'
+yolo_path = 'model/model_yolo.pt'
 yolo_model = torch.hub.load('ultralytics/yolov5', 'custom', path=yolo_path, force_reload=True)
 
 
