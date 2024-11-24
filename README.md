@@ -99,9 +99,9 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
 ## 팀 구성원 및 담당 역할
 ### Leader 
     조재성: 팀장, 솔루션 흐름도, 서비스 구성도, IT인프라 구성, 발표
-### AI 개발
-    김형준: 데이터 수집 및 AI 모델 개발, Streamlit 웹 제작
-    정은찬: 데이터 수집 및 AI 모델 개발, Figma 프로토 제작
-### DX 
+### 개발
+    김형준: 데이터 수집 및 AI 모델 개발, 웹 대시보드 개발
+    정은찬: 데이터 수집 및 AI 모델 개발, 웹 대시보드 개발
+### 기획 
     김민주: 환경 분석, 제안 전략, PPT 작성
     한수빈: 제안 기획, 기대효과, 향후계획, PPT 작성
